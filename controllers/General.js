@@ -8,22 +8,12 @@ const request= require("request");
 let data=[];
 
 
-request('https://www.worldometers.info/coronavirus/#countries', function(err,response, body){
-   
-    let obj={};
-    const $ = cheerio.load(body);
-    
-  
-    
-
-
-});
- 
 
 
 /*GENERAL ROUTES*/
 //Route to direct user to home page
 router.get("/",(req,res)=>{
+    
     console.log("me");
    
     console.log(data[0]);
@@ -36,6 +26,18 @@ router.get("/",(req,res)=>{
 
 });
 router.get("/world",(req,res)=>{
+    let tempdate= new Date()-1;
+    let date = tempdate.
+
+    $.ajax({
+        method: "GET",
+        url: "https://api.namara.io/v0/data_sets/284444a6-86b5-495e-9657-99bdad85ea7a/data/en-3?api_key=17dad579cde818c61dfd734b3d351a90f1232bd3897337d299c5969f6c283c63&where=reported_date eq '"+day+"' and reporting_country_territory eq 'Malawi'"
+    })
+        .done(function (msg) {
+            let temp = msg;
+           console.log(temp);
+        });
+    
 
     console.log(data[0]);
     res.render("world",{
@@ -48,20 +50,16 @@ router.get("/world",(req,res)=>{
 });
 
 router.get("/countrySpec/:id",(req,res)=>{
-    productModel.findById(req.params.id)
-    .then((product)=>{
-        
-       let stockcheck = function(){
-            if(product.quantity>0){
-                return true;
-            }
-            else{
-                return false;
-            }
-        
+    $.ajax({
+    method: "GET",
+    url: "https://api.namara.io/v0/data_sets/284444a6-86b5-495e-9657-99bdad85ea7a/data/en-3?api_key=17dad579cde818c61dfd734b3d351a90f1232bd3897337d299c5969f6c283c63&where=reporting_country_territory eq 'Malawi'"
+})
+    .done(function (msg) {
+        let temp = msg;
+       console.log(temp);
+    });
 
-        }
-        console.log("b");
+   
         res.render("productDesc",{
             id: product._id,
             name:product.name,
@@ -73,10 +71,8 @@ router.get("/countrySpec/:id",(req,res)=>{
             picture:product.picture,
             stockcheck:product.quantity>0
             
-        })
+        });
 
-    })
-    .catch(err=>console.log(`Error -get-productdesc-findbyID: ${err}`))
 
 })
 module.exports =router;
