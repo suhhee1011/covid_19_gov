@@ -1,0 +1,27 @@
+<table border=1>
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>totalCase</th>
+            <th>newCase</th>
+            <th>totalDeathCase</th>
+            <th>newDeaths</th>
+            <th>totalRecovered</th>
+            <th>activeCases</th>
+        </tr>
+    </thead>
+    {{#each country}}
+    <tr>
+            <th>{{this.rank}}</th>
+            <th><a href="/countrySpec/{{this.name}}">{{this.name}}</a> </th>
+            <th>{{this.totalCase}}</th>
+            <th>{{this.newCase}}</th>
+            <th>{{this.totalDeathCase}}</th>
+            <th>{{this.newDeaths}}</th>
+            <th>{{this.totalRecovered}}</th>
+            <th>{{this.activeCases}}</th>
+
+    </tr>
+    {{/each}}
+</table>

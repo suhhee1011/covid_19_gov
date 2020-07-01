@@ -1,0 +1,36 @@
+body { padding: 0 20vw;font-size: 28px;font-family: 'Pangolin', cursive;}
+footer,footer a {background-color: #333; color: white; text-align: center; font-size: 2vw;}
+footer img {margin-top: 0vw;height: 7vw; width: 17vw;}
+footer ul{padding-left: 0vw;}
+
+.m_titdiv{text-align: center;   background-image: url("../img/airplane.jpg"); opacity: 0.8;background-repeat: no-repeat; background-size: 64vw 12vw; height: 12vw; width: 58.5vw;}
+.m_titdiv .m_tit{position: absolute; top:1vw; left: 29vw; font-size: 4vw;}
+.s_tit{text-align:center;font-size: 4vw; margin: 2vw;}
+.home{position: relative;  }
+/*Menu bar*/
+.menubar ul { width: 56.5vw; height: 1vw;list-style-type: none;margin: 0px auto;padding: 1vw;overflow: hidden;background-color: #333;position: -webkit-sticky; /* Safari */position: sticky;top: 0;}
+.menubar ul li {float: left;}
+
+.menubar ul li a {display: block;color: white;text-align: center;padding: 0vw 3.8vw;text-decoration: none; font-size: 1.3vw;}
+.menubar ul li a:hover {background-color: #111;}
+.menubar .active {background-color: #4CAF50;}
+.home .worldstat{ margin: 0; list-style: none; padding-left: 0px;background-image: url("../img/orangecircle.png"); background-size: 60%; background-repeat: no-repeat; background-position: center; height:42vw ;}
+.home .worldstat li{position: absolute; font-size:2.5vw;}
+.home .worldstat li:nth-child(1){top: 17vw; left: 19vw;}
+.home .worldstat li:nth-child(2){top:31vw; left:12vw;}
+.home .worldstat li:nth-child(3){top: 31vw; left: 31vw;}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+
+
+
