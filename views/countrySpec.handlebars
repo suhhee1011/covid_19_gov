@@ -1,13 +1,16 @@
-<div id class="country">
+<div class="country">
     <div id="countryPic">
-        <img src="/pic/{{picture}}" alt="국기">
+     	
+<div id="map-canvas" style="width: 100%; height: 340px" title="도서관 위치입니다."></div>
+
     </div>
-    <div class="home">
-        <h3 class="s_tit">Global Status</h3>
+ 
+        <h3 class="s_tit">{{countryarr.countryName}}</h3>
         <ul class="worldstat">
-            <li>&emsp; Total Cases: {{totalCase}}({{newCase}})</li>
-            <li>&emsp;Death Cases: {{totalDeathCase}}({{newDeaths}})</li>
-            <li> Total Recovered: {{totalRecovered}}</li>
+            
+            <li>{{countryarr.confirmed_cases}}</li>
+            <li>+{{countryarr.new_confirmed_cases}}</li>
+            <li>{{countryarr.total_deaths}}</li>
         </ul>
     </div>
 

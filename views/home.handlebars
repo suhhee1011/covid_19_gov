@@ -1,27 +1,21 @@
 <div class="home">
-    <!--<h3 class="s_tit">Global Status</h3>
+    <h3 class="s_tit">Global Status</h3>
 <ul class="worldstat">
-<li>&emsp; Total Cases<br>{{country.totalCase}}({{country.newCase}})</li>
-<li>&emsp;Death Cases<br>{{country.totalDeathCase}}({{country.newDeaths}})</li>
-<li> Total Recovered<br>&emsp; &nbsp;{{country.totalRecovered}}</li>
+<li> Confirmed Cases<br>{{worldConfirm}} (+ {{worldNewConfirm}})</li>
+<li>Death Cases<br>{{worldDeath}}</li>
+
 </ul>
--->
+
     <div class="sidebar">
         <h3>Where are you from?</h3>
         <ul>
             <li>
-                <form class="productsearch" action="/product" method="POST" width="100" height="100">
+                <form class="countrySearch" action="/country" method="POST" width="100" height="100">
 
-                    <select class="selectbar" name="productmenu">
-                        <option value="Automotive">Automotive</option>
-                        <option value="Arts & Crafts">Arts & Crafts</option>
-                        <option value="Beauty and personal care">Beauty and personal care</option>
-                        <option value="Computers">Computers</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Women's Fashion">Women's Fashion</option>
-                        <option value="Men's Fashion">Men's Fashion</option>
-                        <option value="Home and Kitchen">Home and Kitchen</option>
-                        <option value="Toys and Games">Toys and Games</option>
+                    <select class="selectbar" name="countrymenu">
+                          {{#each countryarr}}
+                        <option value="{{this.countryName}}">{{this.countryName}}</option>
+                        {{/each}}
                     </select>
                     <input class="button" type="submit" value="search">
                 </form>
