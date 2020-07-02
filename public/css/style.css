@@ -19,6 +19,11 @@ footer ul{padding-left: 0vw;}
 .home .worldstat li:nth-child(1){top: 17vw; left: 19vw;}
 .home .worldstat li:nth-child(2){top:31vw; left:12vw;}
 .home .worldstat li:nth-child(3){top: 31vw; left: 31vw;}
+.home .sidebar h3{text-align: center;}
+
+.home .sidebar ul{list-style: none; height: 30px; width: 700px;}
+.home .sidebar .productsearch .selectbar{height: 30px; width: 500px;}
+.worldtable{font-size: 22px;}
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { }
 

@@ -1,0 +1,30 @@
+{
+  "name": "Covid_19_info_gov",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhhee1011/covid_19_gov.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suhhee1011/covid_19_gov/issues"
+  },
+  "homepage": "https://github.com/suhhee1011/covid_19_gov#readme",
+  "dependencies": {
+    "@google/maps": "^1.1.3",
+    "ajax": "0.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.2.2",
+    "request": "^2.88.2"
+  }
+}

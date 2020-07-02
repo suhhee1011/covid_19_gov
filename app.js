@@ -1,7 +1,7 @@
 
 const express = require("express");
 const exphbs =require("express-handlebars");
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 
 
 
@@ -9,12 +9,12 @@ const bodyParser = require("body-parser");
 require("dotenv").config({path:'./config/keys.env'});
 
 //load data
-const generalController = require("./controllers/General");
+const generalController = require("./controllers/general");
 //creation of app object
 const app = express();
 
 //bodyParser middleware
-app.use(bodyParser.urlencoded({extended:false}));
+//app.use(bodyParser.urlencoded({extended:false}));
 
 //express static middleware
 app.use(express.static("public"));

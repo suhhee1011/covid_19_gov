@@ -1,4 +1,4 @@
-<table border=1>
+<table class="worldtable"border=1>
     <thead>
         <tr>
             <th>Rank</th>
@@ -6,22 +6,20 @@
             <th>totalCase</th>
             <th>newCase</th>
             <th>totalDeathCase</th>
-            <th>newDeaths</th>
-            <th>totalRecovered</th>
-            <th>activeCases</th>
+            
         </tr>
     </thead>
-    {{#each country}}
+    <tbody>
+    {{#each countryarr}}
     <tr>
-            <th>{{this.rank}}</th>
-            <th><a href="/countrySpec/{{this.name}}">{{this.name}}</a> </th>
-            <th>{{this.totalCase}}</th>
-            <th>{{this.newCase}}</th>
-            <th>{{this.totalDeathCase}}</th>
-            <th>{{this.newDeaths}}</th>
-            <th>{{this.totalRecovered}}</th>
-            <th>{{this.activeCases}}</th>
+            <td>{{this.rank}}</td>
+            <td><a href="/countrySpec/{{this.countryName}}">{{this.countryName}}</a> </td>
+            <td>{{this.confirmed_cases}}</td>
+            <td>+{{this.new_confirmed_cases}}</td>
+            <td>{{this.total_deaths}}</td>
+           
 
     </tr>
     {{/each}}
+    </tbody>
 </table>
