@@ -24,6 +24,10 @@ footer ul{padding-left: 0vw;}
 .home .sidebar ul{list-style: none; height: 30px; width: 700px;}
 .home .sidebar .productsearch .selectbar{height: 30px; width: 500px;}
 .worldtable{font-size: 22px;}
+
+
+.country .flag img{height:290px; width: 510px; position: relative; margin: 70px 70px 0px 70px;}
+.country .worldstat {list-style: none; text-align: center;}
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { }
 

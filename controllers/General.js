@@ -3,10 +3,10 @@ const router = express.Router();
 const { JSDOM } = require( "jsdom" );
 const { window } = new JSDOM( "" );
 const $ = require( "jquery" )( window );
-const googlemaps= require('@google/maps')
 
-const googleMapsclient = googlemaps.createClient({key: process.env.PLACES_API_KEY,
-});
+const GoogleCharts = require("google-charts");
+
+
 let data=[];
 
 
@@ -52,7 +52,7 @@ router.get("/",(req,res)=>{
            
             }
         
-            console.log(worldNewConfirm);
+            console.log(countryarr)
 
             res.render("home",{
                 title: "Covid-19 Current World Situation",
@@ -152,11 +152,46 @@ router.get("/countrySpec/:name",(req,res)=>{
           }
           countryarr.push(temp);
           console.log(countryarr);
-       
+          const GoogleChartsNode = require('google-charts-node');
+
+function drawChart() {
+ 
+      var data = google.visualization.arrayToDataTable([
+        ['City', '2010 Population', '2000 Population'],
+        ['New York City, NY', 8175000, 8008000],
+        ['Los Angeles, CA', 3792000, 3694000],
+        ['Chicago, IL', 2695000, 2896000],
+        ['Houston, TX', 2099000, 1953000],
+        ['Philadelphia, PA', 1526000, 1517000]
+      ]);
+ 
+      var options = {
+        title: 'Population of Largest U.S. Cities',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: 'Total Population',
+          minValue: 0
+        },
+        vAxis: {
+          title: 'City'
+        }
+      };
+ 
+     
+  const chart = new google.visualization.BarChart(container);
+  chart.draw(data, options);
+}
+
+// Render the chart to image
+const image = GoogleChartsNode.render(drawChart, {
+  width: 400,
+  height: 300,
+});
 
               res.render("countrySpec",{
                    title: "Covid-19 Current World Situation",
-                   countryarr: temp
+                   countryarr: temp,
+                   graph_img: pie_1_chart.getImageURI()
               });
         });
 
