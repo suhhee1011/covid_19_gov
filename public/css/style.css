@@ -1,33 +1,40 @@
-body { padding: 0 20vw;font-size: 28px;font-family: 'Pangolin', cursive;}
+body { padding: 0 20vw;font-size: 3vw;font-family: 'Pangolin', cursive;}
 footer,footer a {background-color: #333; color: white; text-align: center; font-size: 2vw;}
 footer img {margin-top: 0vw;height: 7vw; width: 17vw;}
 footer ul{padding-left: 0vw;}
-
+ol{ background-color:  #ffe3fe;;}
+ol li{margin-left:1vw;}
 .m_titdiv{text-align: center;   background-image: url("../img/airplane.jpg"); opacity: 0.8;background-repeat: no-repeat; background-size: 64vw 12vw; height: 12vw; width: 58.5vw;}
 .m_titdiv .m_tit{position: absolute; top:1vw; left: 29vw; font-size: 4vw;}
 .s_tit{text-align:center;font-size: 4vw; margin: 2vw;}
-.home{position: relative;  }
+.home{position: relative;   background-image: url("../img/virus.png");background-size: 100% 120%; background-repeat: no-repeat;}
 /*Menu bar*/
-.menubar ul { width: 56.5vw; height: 1vw;list-style-type: none;margin: 0px auto;padding: 1vw;overflow: hidden;background-color: #333;position: -webkit-sticky; /* Safari */position: sticky;top: 0;}
+.menubar ul { width: 56.5vw; height: 1vw;list-style-type: none;margin: 0 auto;padding: 1vw;overflow: hidden;background-color: #333;position: -webkit-sticky; /* Safari */position: sticky;top: 0;}
 .menubar ul li {float: left;}
 
 .menubar ul li a {display: block;color: white;text-align: center;padding: 0vw 3.8vw;text-decoration: none; font-size: 1.3vw;}
 .menubar ul li a:hover {background-color: #111;}
 .menubar .active {background-color: #4CAF50;}
-.home .worldstat{ margin: 0; list-style: none; padding-left: 0px;background-image: url("../img/orangecircle.png"); background-size: 60%; background-repeat: no-repeat; background-position: center; height:42vw ;}
+.home .worldstat{ margin: 0; list-style: none; padding-left: 0; background-size: 60%; background-repeat: no-repeat; background-position: center; height:9vw ;}
 .home .worldstat li{position: absolute; font-size:2.5vw;}
-.home .worldstat li:nth-child(1){top: 17vw; left: 19vw;}
-.home .worldstat li:nth-child(2){top:31vw; left:12vw;}
-.home .worldstat li:nth-child(3){top: 31vw; left: 31vw;}
+.home .worldstat li:nth-child(1){top: 7vw; left: 5vw;}
+.home .worldstat li:nth-child(2){top:7vw; left:37vw;}
+
+.home .sidebar {text-align: center; height: 20vw;}
 .home .sidebar h3{text-align: center;}
+.countrySearch{height: 6vw; width: 53vw;}
 
-.home .sidebar ul{list-style: none; height: 30px; width: 700px;}
-.home .sidebar .productsearch .selectbar{height: 30px; width: 500px;}
-.worldtable{font-size: 22px;}
+.home .sidebar ul{list-style: none; height: 4vw; width: 50vw;}
+.home .sidebar #countrySearch .selectbar{height: 4vw; width: 50vw;font-size: 2vw; }
+.home .sidebar #countrySearch .button{height: 4vw; width: 8vw; font-size: 2vw;margin-top: 2vw; border-radius: 2vw; text-align: center;}
+.worldtable{font-size: 2.43vw; background-color: #ffe3fe;}
 
 
-.country .flag img{height:290px; width: 510px; position: relative; margin: 70px 70px 0px 70px;}
-.country .worldstat {list-style: none; text-align: center;}
+.country .flag img{height:26vw; width: 40vw; position: relative; margin: 3vw 0vw 1vw 9vw;box-shadow: 2vw 2vw 3vw grey;}
+.country .worldstat {list-style: none; text-align: center; font-size: 2.5vw;}
+#cumulative{width: 90vw; height: 30vw; font-size: 1vw; margin-left:-4vw;}
+#newcase{width: 80vw; height: 30vw; font-size:1vw; margin-left:-4vw;}
+#death{width: 95vw; height: 30vw; font-size: 1vw; margin-left:-4vw;}
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { }
 

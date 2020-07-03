@@ -24,6 +24,15 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
+app.use((req,res,next)=>{
+
+    if(req.query.method=="PUT")
+    {
+        req.method="PUT"
+    }
+    next();
+})
+
 app.use("/",generalController);
 
 
